@@ -16,7 +16,7 @@ public class MainListActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 
 		// fill ListView
-		String[] daten = { "Deutsch", "Englisch", "FranzÃ¶sisch", "Spanisch",
+		String[] daten = { "Deutsch", "Englisch", "Französisch", "Spanisch",
 				"Tagalog" };
 		setListAdapter(new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_1, daten));
@@ -24,7 +24,7 @@ public class MainListActivity extends ListActivity {
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		Log.d("Ausgabe", "AusgewÃ¤hlt wurde: " + id);
+		Log.d("Ausgabe", "Ausgewählt wurde: " + id);
 		Intent result = new Intent();
 		result.putExtra("languageId", (int) id);
 		setResult(Activity.RESULT_OK, result);

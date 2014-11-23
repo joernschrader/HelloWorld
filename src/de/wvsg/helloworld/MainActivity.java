@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 	
 	@Override
 	public void onClick(View view) {
-		Log.d("Ausgabe","Ausgabe: Button wurde gedrÃ¼ckt!");	
+		Log.d("Ausgabe","Ausgabe: Button wurde gedrückt!");	
 		Intent chooseLanguageIntent = new Intent(this, MainListActivity.class);
 		startActivityForResult(chooseLanguageIntent, 0);
 	}
