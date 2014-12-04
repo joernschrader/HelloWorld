@@ -11,5 +11,6 @@
     <string name="lan_tagalog">Kumusta mundo!</string>
     <string name="title_activity_main_list">MainListActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_tablet">TabletActivity</string>
 
 </resources>

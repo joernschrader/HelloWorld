@@ -2,6 +2,7 @@ package de.wvsg.helloworld;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
@@ -13,6 +14,11 @@ public class MainActivity extends ActionBarActivity implements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if (isTablet()) {
+			startActivity(new Intent(this, TabletActivity.class));
+			finish();
+			return;
+		}
 		setContentView(R.layout.activity_main);
 		if (findViewById(R.id.fragment_container) != null) {
 			if (savedInstanceState != null) {
@@ -42,6 +48,14 @@ public class MainActivity extends ActionBarActivity implements
 							HelloWorldFragment.DEFAULT_HELLOWORLD_FRAGMENT_TAG);
 			hwFragment.updateHelloWorldTag(languageId);
 		}
+	}
+
+	private boolean isTablet() {
+		int sizeMask = this.getResources().getConfiguration().screenLayout
+				& Configuration.SCREENLAYOUT_SIZE_MASK;
+		boolean large = (sizeMask == Configuration.SCREENLAYOUT_SIZE_LARGE);
+		boolean xlarge = (sizeMask == 4);
+		return large || xlarge;
 	}
 
 }
