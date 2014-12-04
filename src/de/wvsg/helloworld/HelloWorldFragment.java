@@ -46,8 +46,7 @@ public class HelloWorldFragment extends Fragment {
 		btnChooseLanguage.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) {
-				Log.d("HelloWorldFragment","onClick");
+			public void onClick(View v) {				
 				mCallback.displayLanguageChoose();				
 			}
 		});
