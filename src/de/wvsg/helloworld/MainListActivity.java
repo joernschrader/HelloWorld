@@ -8,6 +8,12 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import de.wvsg.helloworld.LanguageChooserFragment.OnLanguageChoosenListener;
 
+/**
+ * This activity is hosting the fragment that offers the list for language selection. 
+ *  
+ * @author Joern Schrader
+ * @version 1.0
+ */
 public class MainListActivity extends ActionBarActivity implements
 		OnLanguageChoosenListener {
 

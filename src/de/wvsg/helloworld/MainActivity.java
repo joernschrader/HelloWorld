@@ -8,6 +8,14 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import de.wvsg.helloworld.HelloWorldFragment.OnLanguageChooserDisplayListener;
 
+/**
+ * This activity is hosting the fragment that displays the "Hello World" message. 
+ * If the app is running on a tablet, this activity will start the activity "Tablet Activity".
+ * Otherwise, the fragment "Hello World fragment" will be inflated.
+ * 
+ * @author Joern Schrader
+ * @version 1.0
+ */
 public class MainActivity extends ActionBarActivity implements
 		OnLanguageChooserDisplayListener {
 
@@ -50,6 +58,9 @@ public class MainActivity extends ActionBarActivity implements
 		}
 	}
 
+	/**
+	 * @return true if the running device is a tablet
+	 */
 	private boolean isTablet() {
 		int sizeMask = this.getResources().getConfiguration().screenLayout
 				& Configuration.SCREENLAYOUT_SIZE_MASK;
